@@ -7,7 +7,7 @@ func main() {
 
 	fmt.Scan(&r)
 
-	luas_lingkaran := 22/7 * float64(r)
+	var luas_lingkaran float64 = (float64(22) / float64(7)) * float64(r)
 
 	fmt.Println("Luas lingkaran dengan jari-jari = ", r,  "adalah ", luas_lingkaran)
 }

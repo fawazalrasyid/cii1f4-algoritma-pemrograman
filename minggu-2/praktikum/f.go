@@ -20,7 +20,7 @@ func main() {
 	if n == 0 {
 		rata2 = 0.0
 	} else {
-		rata2 = float64(jumlah/n)
+		rata2 = float64(jumlah) / float64(n)
 	}
 
 	fmt.Println(rata2)
