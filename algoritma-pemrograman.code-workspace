@@ -1,11 +1,14 @@
 {
-	"folders": [
-		{
-			"path": "minggu-1"
-		},
-		{
-			"path": "minggu-2"
-		}
-	],
-	"settings": {}
+  "folders": [
+    {
+      "path": "minggu-1"
+    },
+    {
+      "path": "minggu-2"
+    },
+    {
+      "path": "tugas-pendahuluan"
+    }
+  ],
+  "settings": {}
 }
