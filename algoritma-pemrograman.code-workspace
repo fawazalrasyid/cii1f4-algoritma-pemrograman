@@ -1,12 +1,19 @@
 {
   "folders": [
     {
+      "name": "minggu-1",
       "path": "minggu-1"
     },
     {
+      "name": "minggu-2",
       "path": "minggu-2"
     },
     {
+      "name": "minggu-3",
+      "path": "minggu-3"
+    },
+    {
+      "name": "tugas-pendahuluan",
       "path": "tugas-pendahuluan"
     }
   ],
