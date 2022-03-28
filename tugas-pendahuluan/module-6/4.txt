@@ -1,0 +1,107 @@
+package main
+
+import "fmt"
+
+func main() {
+	// Subprogram mencari nilai maksimum dan minimum
+	var x1, x2, x3, x4 int = 3, 5, 2, 9
+
+	// 4.a function
+	fmt.Println("Pemanggilan function")
+	fmt.Println(findMinMaxFunc(x1, x2, x3, x4))
+
+	// 4.a procedure
+	fmt.Println("\nPemanggilan procedure")
+	findMinMaxPro(x1, x2, x3, x4)
+
+	// Subprogram bilangan bulat ke biner
+	var x int = 1032
+
+	// 4.b procedure
+	fmt.Println("\nPemanggilan function")
+	fmt.Println(convertToBinaryFunc(x))
+
+	// 4.b procedure
+	fmt.Println("\nPemanggilan procedure")
+	convertToBinaryPro(x)
+
+}
+
+func findMinMaxFunc(x1, x2, x3, x4 int) string {
+	var arr [4]int = [4]int{x1, x2, x3, x4}
+
+	var min int = x1
+	var max int = x1
+
+	for i := 1; i < 4; i++ {
+		if arr[i] < min {
+			min = arr[i]
+		}
+		if arr[i] > max {
+			max = arr[i]
+		}
+	}
+
+	var result string = fmt.Sprintf("Nilai minimum: %d Nilai maximum: %d", min, max)
+
+	return result
+
+}
+
+func findMinMaxPro(x1, x2, x3, x4 int) {
+	var arr [4]int = [4]int{x1, x2, x3, x4}
+
+	var min int = x1
+	var max int = x1
+
+	for i := 1; i < 4; i++ {
+		if arr[i] < min {
+			min = arr[i]
+		}
+		if arr[i] > max {
+			max = arr[i]
+		}
+	}
+
+	fmt.Println("Nilai minimum:", min, "Nilai maximum:", max)
+}
+
+func convertToBinaryFunc(x int) string {
+	var num int = x
+	var binary []int
+
+	var result string
+
+	for num != 0 {
+		binary = append(binary, num%2)
+		num = num / 2
+	}
+
+	if len(binary) == 0 {
+		fmt.Printf("%d\n", 0)
+	} else {
+		for i := len(binary) - 1; i >= 0; i-- {
+			result += fmt.Sprintf("%d", binary[i])
+		}
+	}
+
+	return result
+}
+
+func convertToBinaryPro(x int) {
+	var num int = x
+	var binary []int
+
+	for num != 0 {
+		binary = append(binary, num%2)
+		num = num / 2
+	}
+
+	if len(binary) == 0 {
+		fmt.Printf("%d\n", 0)
+	} else {
+		for i := len(binary) - 1; i >= 0; i-- {
+			fmt.Print(binary[i])
+		}
+	}
+}
