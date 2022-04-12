@@ -1,0 +1,62 @@
+function cekGenap(a, b, c, d, e :integer) -> boolean
+algoritma
+    if a % 2 == 0 and b % 2 == 0 and c % 2 == 0 and d % 2 == 0 and e % 2 == 0 then
+        return true
+    endif
+
+    return false
+endfunction
+
+function cekGanjil(a, b, c, d, e :integer) -> boolean
+algoritma
+     if a % 2 != 0 and b % 2 != 0 and c % 2 != 0 and d % 2 != 0 and e % 2 != 0 then
+        return true
+    endif
+
+    return false
+endfunction
+
+procedure hitungPromoMember(in membership, out diskon, cashback : real)
+algoritma
+    if membership == "yes" then
+        cashback <- 15
+        diskon <- 15
+    endif
+endprocedure
+
+procedure hitungPromo(a, b, c, d, e : integer, out diskon, cashback : real)
+kamus
+    isGenap, isGanjil : boolean
+algoritma
+    isGenap <- cekGenap(a, b, c, d, e)
+    isGanjil <- cekGanjil(a, b, c, d, e)
+
+    if not isGenap and not isGanjil then
+        cashback <- 3.1 * (a + b + c)
+        diskon <-  1.7 * (c + d + e) 
+    else if isGenap then
+        cashback <- 3.1 * (a + b + c)
+    else if isGanjil then
+        diskon <- 1.7 * (c + d + e)
+    endif
+
+    if cashback > 35 then
+        cashback <- 35
+    endif
+
+    if diskon > 50 then
+        diskon <- 50
+    endif
+endprocedure
+
+program main
+kamus
+    membership : string
+    a, b, c, d, e : integer
+    diskon, cashback : real
+algoritma
+    read(membership, a, b, c, d, e)
+
+    hitungPromoMember(membership, diskon, cashback)
+    hitungPromo(membership, a, b, c, d, e, diskon, cashback)
+endprogram

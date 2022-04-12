@@ -1,0 +1,29 @@
+function nilaiTeks(teksAngka : string) -> integer;
+    {Diberikan parameter string yang berisi teks angka (NOL, SATU, DUA, ... SEMBILAN) dengan
+     mengembalikan nilai integernya (0, 1, 2, ... 9) }
+kamus 
+    angka : [10]integer
+algoritma
+    angka [10]integer = {'NOL', 'SATU', 'DUA', 'TIGA', 'EMPAT', 'LIMA', 'ENAM', 'TUJUH', 'DELAPAN', 'SEMBILAN'}
+
+    for i := 1 to 10 do
+        if teksAngka = angka[i] then
+            return i
+    endfor
+endfunction
+
+function teksNilai(...) ... 
+    {Diberikan parameter nilai integer, dimana nilai dijamin hanya 1 digit saja (0, 1, 2, ... 9). Fungsi akan
+     mengembalikan teks dari integer tersebut (NOL, SATU, DUA, ... SEMBILAN)}
+
+procedure ambilPerintah(...)
+    {I.S. - F.S. Membaca masukan berupa tiga buah string seperti contoh masukan dan keluaran dan
+     kemudianmengisi parameter op, op1, dan op2 dengan nilai-nilai tersebut}
+
+function hasilKomputasi(...) ... 
+    {Diberikan parameter op, op1, dan op2, fungsi akan menghitung jumlah jika op adalah TAMBAH
+     ataumengurangi op2 dari op1 jika op adalah KURANG (lihat contoh). dan mengembalikan hasil perhitungan.}
+
+procedure tampil(...)
+    {I.S. terdefinisi sebuah bilangan bulat dalam rentang -9 s.d. 18. 
+     F.S. Mencetak teks dari nilai tersebut seperti pada contoh masukan dan keluaran}

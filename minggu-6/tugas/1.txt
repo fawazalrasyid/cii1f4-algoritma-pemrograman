@@ -1,0 +1,31 @@
+procedure factorial(in n : integer, out result : integer)
+kamus
+    result : integer
+algoritma
+    for i <= n do
+        result <- result * i
+    endfor
+
+endprocedure
+
+function permutation(n, r : integer)
+kamus
+    nF, rF : integer
+algoritma
+    factorial(n, &nF)
+	factorial(r, &rF)
+
+    write(nF)
+    write(rF)
+
+	return nF / rF
+endfunction
+
+program main
+kamus
+    a, b : integer
+algoritma
+    read(a, b)
+
+    write(permutation(a, b))
+endprogram

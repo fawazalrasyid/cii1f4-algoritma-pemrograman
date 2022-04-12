@@ -1,0 +1,20 @@
+procedure hitungVolume(a,b,c:integer, op : string)
+algoritma
+    if op == "T" then
+        write(a*b*c)
+    else if op == "O" then
+        write(3.14*(a*a)*c)
+    else if op == "P" then
+        write(((1/2)*a*b)*c)
+    endif
+endprocedure
+
+program main
+kamus
+    a, b, c, : integer
+    op : string
+algoritma
+    read(a, b, c, op)
+
+    hitungVolume(a, b, c, op)
+endprogram

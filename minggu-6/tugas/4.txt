@@ -1,0 +1,41 @@
+procedure membeliBibit(in uangAwal: real, in/out tUang, tPengeluaran: real)
+    {IS. Terdefinisi modal uangAwal, total Uang tUang dan total pengeluaran tPengeluaran
+     FS. tUang berkurang setelah pembelian bibit, sedangkan tPengeluaran bertambah }
+algoritma
+    tUang <- tUang - (uangAwal / 4)
+    tPengeluaran <- tPengeluaran + (uangAwal / 4)
+
+procedure membeliPupuk(in uangAwal: real, in/out tUang, tPengeluaran: real)
+    {IS. Terdefinisi modal uangAwal, total Uang tUang dan total pengeluaran tPengeluaran
+     FS. tUang berkurang setelah pembelian pupuk, sedangkan tPengeluaran bertambah}
+algoritma
+    tUang <- tUang - (uangAwal / 20)
+    tPengeluaran <- tPengeluaran + (uangAwal / 20)
+
+procedure menanamBibit(in uangAwal: real, in/out tUang, tPengeluaran: real)
+    {IS. Terdefinisi modal uangAwal, total Uang tUang dan total pengeluaran tPengeluaran
+     FS. tUang berkurang setelah menamam bibit, sedangkan tPengeluaran bertambah }
+algoritma
+    tUang <- tUang - (uangAwal / 200)
+    tPengeluaran <- tPengeluaran + (uangAwal / 200)
+
+procedure memberiPupuk(in uangAwal: real, in/out tUang, tPengeluaran: real)
+    {IS. Terdefinisi modal uangAwal, total Uang tUang dan total pengeluaran tPengeluaran
+     FS. tUang berkurang setelah memberi pupuk, sedangkan tPengeluaran bertambah }
+algoritma
+    tUang <- tUang - (uangAwal / 200)
+    tPengeluaran <- tPengeluaran + (uangAwal / 200)
+
+procedure memanen(in uangAwal: real, in/out tUang, tPengeluaran: real)
+    {IS. Terdefinisi modal uangAwal, total Uang tUang dan total pengeluaran tPengeluaran
+     FS. tUang berkurang setelah panen, sedangkan tPengeluaran bertambah }
+algoritma
+    tUang <- tUang - ((3 * uangAwal) / 200)
+    tPengeluaran <- tPengeluaran + ((3 * uangAwal) / 200)
+
+procedure menjualHasilPanen(in uangAwal: real, in/out tUang, tPengeluaran: real)
+    {IS. Terdefinisi modal uangAwal, total Uang tUang, total pengeluaran tPengeluaran, dantotal pemasukan tPemasukan
+     FS. Nilai tUang terupdate, sedangkan tPengeluaran bertambah dan tPemasukan bertambah}
+algoritma
+    tUang <- (tUang - ((3 * uangAwal) / 200)) + (uangAwal / 2)
+    tPengeluaran <- (tPengeluaran + ((3 * uangAwal) / 200))
