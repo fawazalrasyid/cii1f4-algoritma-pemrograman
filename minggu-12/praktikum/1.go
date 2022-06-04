@@ -21,6 +21,7 @@ func main() {
 	var dealerScore int = 0
 	var boneyard, playerTiles, dealerTiles arrDomino
 	var decision, nBoneyard, pSkor, dSkor, total int
+	var changeTile int = 1
 	fmt.Println("Welcome to the Algorithm and Programming Practicum")
 	rand.Seed(time.Now().UnixNano())
 	// membuat 28 Tile ke dalam boneyard
@@ -51,7 +52,12 @@ func main() {
 		// lakukan loop selama pilihan adalah 1 atau 2 yaitu replace tile
 		for decision == 1 || decision == 2 {
 			// ganti satu kartu pemain berdasarkan nilai decision
-			replaceTile(&boneyard, &playerTiles, &nBoneyard, decision)
+			if changeTile <= 2 {
+				replaceTile(&boneyard, &playerTiles, &nBoneyard, decision)
+				changeTile += 1
+			} else {
+				fmt.Println("Andah telah mengganti sebanyak 2 kali")
+			}
 			// tampilkan Tile player
 			printTile(playerTiles, "player")
 			// menampilkan jumlah Tile di boneyard
@@ -98,6 +104,11 @@ func getDecision(decision *int) {
 	// KERJAKAN MANDIRI
 	fmt.Print("Decicion?")
 	fmt.Scanln(&*decision)
+
+	for *decision != 0 && *decision != 1 && *decision != 2 && *decision != 9 {
+		fmt.Print("Decicion?")
+		fmt.Scanln(&*decision)
+	}
 }
 
 func buatTile(T *arrDomino) {
