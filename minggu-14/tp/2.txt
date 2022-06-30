@@ -1,0 +1,39 @@
+program FIF 
+kamus  
+    {deklarasikan secara global untuk variabel berikut!} 
+    pita : string 
+    CC : char {gunakan tipe byte di Go} 
+    EOP : boolean 
+    indeks : integer 
+
+    {deklarasikan secara lokal untuk variabel tambahan lainnya}
+    ... 
+    
+algoritma  
+    ...  
+endprogram  
+ 
+{properti mesin karakter} 
+procedure START() 
+{ I.S. pita telah berisi oleh sekumpulan karakter yang diakhiri oleh hashtag '.' 
+ F.S. CC berisi karakter pertama dari pita, EOP bernilai true apabila CC adalah '.', false untuk sebaliknya } 
+algoritma  
+ indeks 🡨 0 
+ CC 🡨 pita[indeks] 
+ EOP 🡨 CC == '.' 
+endprocedure  
+procedure ADV() 
+{ I.S. EOP bernilai false 
+ F.S. CC berisi karakter berikutnya dari CC pada pita karakter saat ini, EOP bernilai true apabila CC adalah '.', false untuk sebaliknya } 
+algoritma  
+ indeks 🡨 indeks + 1 
+ CC 🡨 pita[indeks] 
+ EOP 🡨 CC == '.' 
+endprocedure  
+function DIGIT() → boolean 
+{ mengembalikan true apabila CC adalah digit '0', '1', '2', ..., atau '9', false untuk kemungkinan yang lain } 
+algoritma  
+ ... 
+endfunction  
+ 
+
