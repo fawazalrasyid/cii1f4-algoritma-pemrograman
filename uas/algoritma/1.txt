@@ -1,0 +1,30 @@
+procedure bacaDaftar(in/out tab:arrT, in/out n:integer);
+kamus
+    nama : string;
+    skor : integer;
+algortima 
+    n <--0;
+    read nama, skor;
+    while nama != "." do
+        tab[n].nama <-- nama;
+        tab[n].skor <-- skor;
+        n <-- n+1;
+        read nama, skor;
+    end while;
+end procedure;
+
+function posisiJawar(tab:arrT, n:integer, nama:string) --> integer
+kamus
+    i : integer;
+    name : string;
+algortima
+    i <--0;
+    while (i < n) and (tab[i].nama <> nama) do
+        i <-- i+1;
+    end while;
+    if i < n then
+        posisiJawar <-- i;
+    else
+        posisiJawar <-- -1;
+    end if;
+end function;

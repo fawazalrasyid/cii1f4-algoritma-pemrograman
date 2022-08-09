@@ -1,0 +1,20 @@
+procedure sortSelebgram(in/out: T:TabelSelebgram, in N : integer);
+kamus
+    i,j : integer;
+    temp : Selebgram;
+algortima
+    i : 1;
+    j : N;
+    temp : Selebgram;
+    while (i<j)
+        if (T[i].Nama < T[j].Nama)
+            temp := T[i];
+            T[i] := T[j];
+            T[j] := temp;
+        end
+        else
+            i := i+1;
+        end
+        j := j-1;
+    end
+end;

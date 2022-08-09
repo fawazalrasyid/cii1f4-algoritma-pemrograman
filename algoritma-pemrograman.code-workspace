@@ -59,6 +59,9 @@
     {
       "name": "tugas-pendahuluan",
       "path": "tugas-pendahuluan"
+    },
+    {
+      "path": "uas"
     }
   ],
   "settings": {}
